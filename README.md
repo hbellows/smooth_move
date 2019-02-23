@@ -5,7 +5,7 @@
 [![codecov.io](https://codecov.io/gh/hbellows/smooth_move/branch/master/graph/badge.svg)](https://codecov.io/gh/hbellows/smooth_move)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/hbellows/smooth_move/master.svg)
 
-#Smooth Move
+# Smooth Move
 
 
 ## Table of Contents

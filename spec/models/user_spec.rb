@@ -18,6 +18,5 @@ RSpec.describe User, type: :model do
     expect(new_user.email).to eq('johnsmith@example.com')
     expect(new_user.name).to eq('John Smith')
     expect(new_user.google_token).to eq('4321')
-
   end
 end

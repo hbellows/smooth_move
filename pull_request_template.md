@@ -1,6 +1,6 @@
-____ Wrote Tests
-____ Implemented 
-____ Reviewed
+- [] Wrote Tests
+- [] Implemented 
+- [] Reviewed
 
 
 # Neccesary checkmarks:

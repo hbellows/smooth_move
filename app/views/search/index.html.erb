@@ -5,7 +5,7 @@
 </div>
 
 <div class='row mt-5'>
-  <% @city.city_matches.each do |match| %>
+  <% @city_search.city_matches.each do |match| %>
     <div class='col-12 col-md-6 col-lg-4 my-3'>
       <div class='card rounded shadow'>
         <div class='row'>
@@ -13,7 +13,7 @@
             <h5 class='card-title text-center my-2'><%= "#{match.city_name}" %></h5>
             <div class='card-body d-flex justify-content-between'>
               <div class='text-right col'>
-                <%= link_to 'View', location_path(city: location.city, state: location.state, id: location.geo_id ), class: 'btn btn-primary col' %>
+                <%= link_to 'View', location_path(geo_id: match.geo_id ), class: 'btn btn-primary col' %>
               </div>
             </div>
           </div>

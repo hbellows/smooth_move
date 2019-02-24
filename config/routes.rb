@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 
   get '/dashboard', to: 'users#show'
 
-  resources :locations, only: %i[index show]
+  get '/search', to: 'search#index'
 end

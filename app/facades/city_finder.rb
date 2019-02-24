@@ -6,11 +6,15 @@ class CityFinder
     @city = city
   end
 
+  def find_city_matches
+    city_data.keep_if do |data|
+      data[5] == "160"
+    end
+  end
+
   def city_matches
-    city_data.map do |data|
-      if data[5] == "160"
-        City.new(data)
-      end
+    find_city_matches.map do |data|
+      City.new(data)
     end
   end
 

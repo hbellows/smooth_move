@@ -1,6 +1,7 @@
 require 'rails_helper'
 
-describe 'Oauth' do
+describe 'Google Oauth' do
+
   context 'User can log in with Google' do
     it 'logs a user into the application and redirects to user home page' do
       user = User.create(uid: '1234', google_token: '4321', email: 'example@gmail.com', name: "John Smith")
@@ -27,4 +28,5 @@ describe 'Oauth' do
       expect(current_path).to eq('/')
     end
   end
+
 end

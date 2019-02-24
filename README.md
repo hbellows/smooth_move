@@ -19,7 +19,35 @@
     * [Running the Test Suite](#running-the-test-suite)
 * [Screenshots](#screenshots)
     * [Home Page](#home-page)
-    * [City View Page](#city-view-page)
-    * [City Search Page](#city-search-page)
+    * [City View](#city-view)
+    * [City Search](#city-search)
+* [Known Issues](#known-issues)
+* [How To Contribute](#how-to-contribute)
 * [Contributors/Developers](#contributorsdevelopers)
 * [Special Thanks](#special-thanks)
+
+## Description/Purpose
+
+## System Requirements
+
+## Application Requirements
+
+##Installation
+
+## Configuration
+
+## Testing Suite
+### Running the Test Suite
+
+## Screenshots
+### Home Page
+### City View
+### City Search
+
+## Known Issues
+
+## How To Contribute
+
+## Contributors/Developers
+
+## Special Thanks

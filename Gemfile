@@ -18,6 +18,7 @@ gem 'jquery-rails'
 gem 'chartkick'
 gem 'bcrypt', '~> 3.1.7'
 gem 'therubyracer'
+gem 'omniauth-google-oauth2'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -39,6 +40,8 @@ group :test do
   gem 'factory_bot_rails'
   gem 'launchy'
   gem 'shoulda-matchers'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

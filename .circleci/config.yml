@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/smooth_move
     docker:
-      - image: circleci/ruby:2.4.1
+      - image: circleci/ruby:2.4.1-node-browsers
         environment:
           PGHOST: localhost
           PGUSER: smooth_move
@@ -43,3 +43,5 @@ jobs:
 
       # Run the tests
       - run: bundle exec rake
+
+# NOTE: Add ENV['EXECJS_RUNTIME'] = 'Node' to config/boot.rb to fix js runtime errors in Rails 5.2

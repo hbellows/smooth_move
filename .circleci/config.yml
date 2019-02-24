@@ -43,3 +43,5 @@ jobs:
 
       # Run the tests
       - run: bundle exec rake
+
+# NOTE: Add ENV['EXECJS_RUNTIME'] = 'Node' to config/boot.rb to fix js runtime errors in Rails 5.2

@@ -9,7 +9,13 @@ describe 'Search feature' do
       click_on 'Search'
 
       expect(current_path).to eq(search_path)
-      expect(page).to have_content('Denver')
+      expect(page).to have_content('Denver, CO')
+      expect(page).to have_content('Denver, PA')
+      expect(page).to have_content('Denver, NC')
+      expect(page).to have_content('Denver, IA')
+      expect(page).to have_content('Denver, IN')
+      expect(page).to have_content('Denver, MO')
+      expect(page).to have_content('Denver City, TX')
     end
   end
 end

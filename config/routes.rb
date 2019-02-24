@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'users#show'
 
   get '/search', to: 'search#index'
+
+  resources :locations, only: %i[show]
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class City
 
   attr_reader :geo_id, :city_name

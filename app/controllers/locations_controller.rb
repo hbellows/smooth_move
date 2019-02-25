@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-class LocationsController < ApplicationControllers
+class LocationsController < ApplicationController
 
   def show
-
+    @city = CityInformation.new(params[:id])
   end
 end

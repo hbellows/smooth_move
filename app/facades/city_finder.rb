@@ -9,7 +9,7 @@ class CityFinder
   end
 
   def find_city_matches
-    city_data.keep_if do |data|
+    cities_data.keep_if do |data|
       data[5] == "160"
     end
   end
@@ -26,7 +26,7 @@ class CityFinder
     @client ||= DataUsaClient.new
   end
 
-  def city_data
+  def cities_data
     data_usa_client.find_cities(city)[:data]
   end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   validates :email, uniqueness: true, presence: true
   validates :google_token, presence: true

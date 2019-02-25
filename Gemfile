@@ -17,8 +17,12 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'chartkick'
 gem 'bcrypt', '~> 3.1.7'
-gem 'therubyracer'
+# gem 'therubyracer'
 gem 'omniauth-google-oauth2'
+gem "breadcrumbs_on_rails"
+gem 'filterrific'
+gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap4'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

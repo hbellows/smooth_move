@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+@import './base/*';
+@import './components/*';
+
+body {
+  background-color: $body-bg;
+}
+
+.btn {
+  &:hover {
+    cursor: pointer;
+  }
+}

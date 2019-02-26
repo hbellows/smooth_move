@@ -1,24 +1,122 @@
-<h3><%= @city.city_name %></h3>
-<ul>Total Population: <%= @city.population %></ul> 
-<ul>Average Age: <%= @city.average_age %></ul>
-<ul>Non-US Citizens: <%= @city.non_us_citizens %>%</ul>
-<ul>Mean Commute Time: <%= @city.mean_commute %> minutes</ul>
-<ul>Average Income: $<%= @city.average_income %></ul>
-<ul>Owner-Occupied Houses: <%= @city.owner_occupied %>%</ul>
+<div class='row'>
+  <div class='col-12 text-center'>
+    <h3><span class="lnr lnr-home"></span><%= city.city_name %></h3>
+  </div>
 
-<h3>Transportation Data</h3>
-<ul>Drive: <%= @city.drive %></ul>
-<ul>Carpool: <%= @city.carpool %></ul>
-<ul>Public Transportation: <%= @city.public_transport %></ul>
-<ul>Motorcycle: <%= @city.motorcycle %></ul>
-<ul>Bike: <%= @city.bike %></ul>
-<ul>Walk: <%= @city.walk %></ul>
+  <div class='col-12 mx-auto'>
+    <div class='row text-center'>
+      <div class='col-12'>
+        <% if current_user.favorited?(city.geo_id) %>
+          <%= form_tag favorite_path(geo_id: city.geo_id), { action: 'update', method: :put } do %>
+            <%= hidden_field_tag :geo_id, city.geo_id  %>
+            <%= submit_tag 'Unfavorite', type: 'submit', class: "btn btn-primary" , method: :put%>
+          <% end %>
+        <% else %>
+          <%= form_tag :favorites, { action: 'create' } do %>
+            <%= hidden_field_tag :geo_id, city.geo_id  %>
+            <%= submit_tag 'Favorite', type: 'submit', class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </div>
 
-<h3>Ethnicity Data</h3>
-<ul>Multi-Racial: <%= @city.multi_racial %></ul>
-<ul>Asian: <%= @city.asian %></ul>
-<ul>Black: <%= @city.black %></ul>
-<ul>Hawiian: <%= @city.hawaiian %></ul>
-<ul>Latinx: <%= @city.latinx %></ul>
-<ul>Native American: <%= @city.native_american %></ul>
-<ul>White: <%= @city.white %></ul>
+      <div class='col-6 text-left'>
+      </div>
+    </div>
+  </div>
+
+  <div class='col-12 mt-5'>
+    <div class='row'>
+      <div class='col-12 col-md-4 h-100'>
+        <div class='card rounded shadow p-2'>
+          <div class='d-flex flex-column'>
+            <div class='py-3 px-5 d-flex justify-content-between'>
+              <span class='d-inline-block'>Total Population: </span>
+              <span><%= city.population %></span>
+            </div>
+            <div class='py-3 px-5 d-flex justify-content-between'>
+              <span class='d-inline-block'>Average Age: </span>
+              <span><%= city.average_age %></span>
+            </div>
+            <div class='py-3 px-5 d-flex justify-content-between'>
+              <span class='d-inline-block'>Non-US Citizens: </span>
+              <span><%= city.non_us_citizens %></span>
+            </div>
+            <div class='py-3 px-5 d-flex justify-content-between'>
+              <span class='d-inline-block'>Mean Commute Time: </span>
+              <span><%= city.mean_commute %></span>
+            </div>
+            <div class='py-3 px-5 d-flex justify-content-between'>
+              <span class='d-inline-block'>Average Income: </span>
+              <span><%= city.average_income %></span>
+            </div>
+            <div class='py-3 px-5 d-flex justify-content-between'>
+              <span class='d-inline-block'>Owner-Occupied Houses: </span>
+              <span><%= city.owner_occupied %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-12 col-md-4 h-100'>
+        <div class='card rounded shadow p-2'>
+          <div class='card-title text-center'>
+            <h5>Transportation Data</h5>
+          </div>
+
+          <div class='d-flex flex-column'>
+            <div class='py-3 px-5 d-flex justify-content-between'>
+              <span>Drive: </span><span><%= city.drive %></span>
+            </div>
+            <div class='py-3 px-5 d-flex justify-content-between'>
+              <span>Carpool: </span><span><%= city.carpool %></span>
+            </div>
+            <div class='py-3 px-5 d-flex justify-content-between'>
+              <span>Public Transportation: </span><span><%= city.public_transport %></span>
+            </div>
+            <div class='py-3 px-5 d-flex justify-content-between'>
+              <span>Motorcycle: </span><span><%= city.motorcycle %></span>
+            </div>
+            <div class='py-3 px-5 d-flex justify-content-between'>
+              <span>Bike: </span><span><%= city.bike %></span>
+            </div>
+            <div class='py-3 px-5 d-flex justify-content-between'>
+              <span>Walk: </span><span><%= city.walk %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-12 col-md-4 h-100'>
+        <div class='card rounded shadow p-2'>
+          <div class='card-title text-center'>
+            <h5>Ethnicity Data</h5>
+          </div>
+
+          <div class='d-flex flex-column'>
+            <div class='py-3 px-5 d-flex justify-content-between'>
+              <span>Multi-Racial: <%= city.multi_racial %></span>
+            </div>
+            <div class='py-3 px-5 d-flex justify-content-between'>
+              <span>Asian: <%= city.asian %></span>
+            </div>
+            <div class='py-3 px-5 d-flex justify-content-between'>
+              <span>Black: <%= city.black %></span>
+            </div>
+            <div class='py-3 px-5 d-flex justify-content-between'>
+              <span>Hawiian: <%= city.hawaiian %></span>
+            </div>
+            <div class='py-3 px-5 d-flex justify-content-between'>
+              <span>Latinx: <%= city.latinx %></span>
+            </div>
+            <div class='py-3 px-5 d-flex justify-content-between'>
+              <span>Native American: <%= city.native_american %></span>
+            </div>
+            <div class='py-3 px-5 d-flex justify-content-between'>
+              <span>White: <%= city.white %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

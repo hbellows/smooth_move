@@ -1,7 +1,24 @@
-<h3>Search Results for <%= @city.city_name %></h3>
+<h3><%= @city.city_name %></h3>
 <ul>Total Population: <%= @city.population %></ul> 
 <ul>Average Age: <%= @city.average_age %></ul>
 <ul>Non-US Citizens: <%= @city.non_us_citizens %>%</ul>
 <ul>Mean Commute Time: <%= @city.mean_commute %> minutes</ul>
 <ul>Average Income: $<%= @city.average_income %></ul>
 <ul>Owner-Occupied Houses: <%= @city.owner_occupied %>%</ul>
+
+<h3>Transportation Data</h3>
+<ul>Drive: <%= @city.drive %></ul>
+<ul>Carpool: <%= @city.carpool %></ul>
+<ul>Public Transportation: <%= @city.public_transport %></ul>
+<ul>Motorcycle: <%= @city.motorcycle %></ul>
+<ul>Bike: <%= @city.bike %></ul>
+<ul>Walk: <%= @city.walk %></ul>
+
+<h3>Ethnicity Data</h3>
+<ul>Multi-Racial: <%= @city.multi_racial %></ul>
+<ul>Asian: <%= @city.asian %></ul>
+<ul>Black: <%= @city.black %></ul>
+<ul>Hawiian: <%= @city.hawaiian %></ul>
+<ul>Latinx: <%= @city.latinx %></ul>
+<ul>Native American: <%= @city.native_american %></ul>
+<ul>White: <%= @city.white %></ul>

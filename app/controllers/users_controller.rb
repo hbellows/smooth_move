@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-
+  helper_method :favorite_locations
+  
   def show
     favorite_locations
   end

@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CityInformation
+  include TransportationDataHelper
+  include EthnicityDataHelper
 
   attr_reader :geo_id
 
@@ -14,6 +16,10 @@ class CityInformation
 
   def city_name
     city_overview[:display_name]
+  end
+
+  def city_url
+    city_overview[:url_name]
   end
 
   def city_stats
@@ -48,62 +54,9 @@ class CityInformation
     CityData.new(find_transportation_data).data
   end
 
-  def drive
-    transportation_stats[:transport_cartruckorvan].to_i
-  end
-
-  def carpool
-    transportation_stats[:transport_carpooled].to_i
-  end
-
-  def public_transport
-    transportation_stats[:transport_publictrans].to_i
-  end
-
-  def motorcycle
-    transportation_stats[:transport_motorcycle]
-  end
-  
-  def bike
-    transportation_stats[:transport_bicycle].to_i
-  end
-
-  def walk
-    transportation_stats[:transport_walked]
-  end
-
   def ethnicity_stats
     CityData.new(find_ethnicity_data).data
   end
-
-  def multi_racial
-    ethnicity_stats[:pop_2ormore].to_i
-  end
-
-  def asian
-    ethnicity_stats[:pop_asian].to_i
-  end
-
-  def black
-    ethnicity_stats[:pop_black].to_i
-  end
-
-  def hawaiian
-    ethnicity_stats[:pop_hawaiian].to_i
-  end
-
-  def latinx
-    ethnicity_stats[:pop_latino].to_i
-  end
-
-  def native_american
-    ethnicity_stats[:pop_native].to_i
-  end
-
-  def white
-    ethnicity_stats[:pop_white].to_i
-  end
-
 
   private 
 

@@ -135,7 +135,7 @@ Issues needing additional support:
 <img src="./screenshots/user_dashboard.png">
 
 ## Known Issues
-There are no known issues at this time.
+One small issue remaining: Removing the Oauth sign in link from the home page once a user has logged in.
 
 ## Contributors/Developers
 This project was submitted by [Harper Bellows](@hbellows)

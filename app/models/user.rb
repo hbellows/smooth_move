@@ -25,4 +25,9 @@ class User < ApplicationRecord
     location = locations.find_by(geo_id: geo_id)
     favorites.active.find_by(location_id: location&.id)
   end
+
+  def eliminated_favorite?(geo_id)
+    location = locations.find_by(geo_id: geo_id)
+    favorites.eliminated.find_by(location_id: location&.id)
+  end
 end

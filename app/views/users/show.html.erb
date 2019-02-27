@@ -1,9 +1,9 @@
 
 <h1>Welcome <%= current_user.name %></h1>
-<h4>Active Favorites: <%= current_user.favorites.count %></h4>
+<h4>Active Favorites: <%= current_user.favorites.active.count %></h4>
 
 <div class="list-group">
-  <% current_user.favorites.all.each do |favorite| %>
+  <% current_user.favorites.active.each do |favorite| %>
     <%= link_to location_path(id: favorite.location.geo_id),
                 class: 'list-group-item list-group-item-action favorites' do %>
       <div class="d-flex w-100 justify-content-between">          

@@ -1,16 +1,15 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  helper_method :favorite_locations
-  
+  helper_method :favorites
+
   def show
-    favorite_locations
+    favorites
   end
 
   private
 
-  def favorite_locations
-    favorite_ids = current_user.favorites.active.pluck(:location_id)
-    @favorite_locations ||= Location.find_by(id: favorite_ids)
+  def favorites
+    @favorites ||= current_user.favorites.active
   end
 end

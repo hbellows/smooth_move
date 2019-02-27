@@ -26,6 +26,8 @@
 ## Description/Purpose
 This application was developed for the final project assignment for Turing School's Backend Engineering Program.  More information about this assignment can be found [here](http://backend.turing.io/module4/projects/take_home_challenge/take_home_challenge_spec).
 
+View the project board for this application [here](https://github.com/hbellows/smooth_move/projects/1)
+
 The specfic assignment required the student to build a fullstack application according to the following specification:
 ```
 Create a tool that people who are considering moving can get some data points on for a prospective city:
@@ -61,7 +63,7 @@ More information about GitHub developer keys can be found in the [GitHub develop
    - `GITHUB_API_KEY`
 5. Run `rails db:{create,migrate,seed}` in the project folder.
 6. To use the application locally, run `rails s` and navigate to `http:localhost:3000`
-7. Or, use go [here](https://git-wired-be.herokuapp.com/) to see the application live
+7. Or, use go [here](https://smooth-move-1.herokuapp.com/) to see the application live
 
 ## Running Tests
 Run `rspec` to run the full test suite, or `rails server` to load up the application.

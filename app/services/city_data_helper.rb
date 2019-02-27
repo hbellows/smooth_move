@@ -14,6 +14,10 @@ module CityDataHelper
     city_stats[:pop]
   end
 
+  def pop_rank
+    city_data[:pop_rank].to_i
+  end
+
   def average_age
     city_stats[:age]
   end
@@ -28,6 +32,14 @@ module CityDataHelper
 
   def average_income
     city_stats[:income].to_i
+  end
+
+  def income_rank
+    city_data[:income_rank].to_i
+  end
+
+  def average_property_value
+    city_stats[:median_property_value]
   end
 
   def owner_occupied

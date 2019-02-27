@@ -3,14 +3,15 @@
 module EthnicityDataHelper
 
   def ethnicity_hash
-    # {
-    #   Bicycle: bike,
-    #   Carpool: carpool,
-    #   Drive:   drive,
-    #   Motorcycle: motorcycle,
-    #   'Public Transportation': public_transport,
-    #   Walk: walk
-    # }
+    {
+      'Native American/Alaskan Native': native_american,
+      Black: black,
+      White: white,
+      Asian: asian,
+      'Hawaiian/Pacific Islander': pacific,
+      Latinx: latinx,
+      'Multi-Racial': multi_racial
+    }
   end
 
   def multi_racial
@@ -25,7 +26,7 @@ module EthnicityDataHelper
     ethnicity_stats[:pop_black].to_i
   end
 
-  def hawaiian
+  def pacific
     ethnicity_stats[:pop_hawaiian].to_i
   end
 

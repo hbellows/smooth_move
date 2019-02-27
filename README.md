@@ -120,7 +120,7 @@ Issues needing additional support:
 ### Home Page
 Coming Soon!
 ### City View
-Coming Soon!
+<img src="./screenshots/city_view.png">
 ### City Search
 Coming Soon!
 

@@ -23,6 +23,8 @@
     <div class="d-flex mt-3 justify-content-around align-items-start">
       <div class="flex-row">
           <div class="bd-highlight text-center">
+          <h4></h4>
+          <br/>
             <h1 class="display-4">
               <%= city.city_name %>
             </h1>
@@ -89,6 +91,7 @@
 
 <div class="d-flex p-2 flex-column">
   <h1>Transportation</h1>
+  <h4>Mean Commute Time: <%= city.mean_commute %> minutes</h4>
   <h5 class="ml-2 text-muted"></h5>
   <%= pie_chart(city.transport_hash) %>
 </div>

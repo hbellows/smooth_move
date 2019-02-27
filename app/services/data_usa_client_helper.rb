@@ -24,6 +24,10 @@ module DataUsaClientHelper
     @client ||= DataUsaClient.new
   end
 
+  def cities_data
+    data_usa_client.find_cities(city)[:data]
+  end
+
   def find_city_overview
     @overview ||= data_usa_client.find_city_overview(geo_id)
   end
@@ -38,5 +42,16 @@ module DataUsaClientHelper
 
   def find_ethnicity_data
     @ethnicity ||= data_usa_client.find_ethnicity_data(geo_id)
+  end
+end
+
+class CityData
+
+  attr_reader :data
+
+  def initialize(raw_data)
+    headers = raw_data[:headers]
+    info = raw_data[:data].flatten
+    @data = headers.zip(info).to_h.symbolize_keys
   end
 end

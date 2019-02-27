@@ -26,7 +26,7 @@ module TransportationDataHelper
   end
 
   def motorcycle
-    transportation_stats[:transport_motorcycle]
+    transportation_stats[:transport_motorcycle].to_i
   end
   
   def bike
@@ -34,6 +34,6 @@ module TransportationDataHelper
   end
 
   def walk
-    transportation_stats[:transport_walked]
+    transportation_stats[:transport_walked].to_i
   end
 end

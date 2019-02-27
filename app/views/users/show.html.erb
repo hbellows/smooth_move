@@ -1,21 +1,13 @@
 
-<nav>
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item">
-      <%= link_to 'Home', root_path %>
-    </li>
-    <li class="breadcrumb-item active">Dashboard</li>
-  </ol>
-</nav>
 <h1>Welcome <%= current_user.name %></h1>
 <h4>Active Favorites: <%= current_user.favorites.count %></h4>
 
 <div class="list-group">
   <% current_user.favorites.all.each do |favorite| %>
-    <%= link_to "/locations?q=#{favorite.city_name}&id=#{favorite.url_name}",
+    <%= link_to location_path(id: favorite.location.geo_id),
                 class: 'list-group-item list-group-item-action favorites' do %>
       <div class="d-flex w-100 justify-content-between">          
-        <h5 class="mb-1"><%= favorite.name %></h5>
+        <h5 class="mb-1"><%= favorite.location.name %></h5>
         <small>Saved <%= time_ago_in_words(favorite.updated_at) %> ago</small>
       </div>
     <% end %>

@@ -12,10 +12,6 @@ class DataUsaClient
     get_json("/api/?geo=#{geo_id}&#{acs_url}&force=acs.yg")
   end
 
-  def find_city_name(geo_id)
-    get_json("/attrs/geo/#{geo_id}/")
-  end
-
   def find_transport_data(geo_id)
     get_json("/api/?geo=#{geo_id}&#{acs_url}&force=acs.yg_transport")
   end

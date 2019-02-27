@@ -3,9 +3,7 @@
 class LocationsController < ApplicationController
   helper_method :city
   
-  def show
-    city
-  end
+  def show; end
 
   private
 

@@ -70,9 +70,8 @@ Run `rspec` to run the full test suite, or `rails server` to load up the applica
 ## Dependencies
 
  ### All Environments
- [Rails](https://guides.rubyonrails.org/)
- 
- [Postgresql](https://www.postgresql.org/)
+ * [Rails](https://guides.rubyonrails.org/)
+ * [Postgresql](https://www.postgresql.org/)
  
  [Puma](https://github.com/puma/puma)
  

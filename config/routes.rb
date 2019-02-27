@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get '/search', to: 'search#index'
 
   resources :locations, only: %i[show]
+  resources :favorites, only: %i[create update]
 end

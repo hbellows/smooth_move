@@ -20,4 +20,9 @@ class User < ApplicationRecord
     user.save!
     user
   end
+
+  def favorited?(geo_id)
+    location = locations.find_by(geo_id: geo_id)
+    favorites.active.find_by(location_id: location&.id)
+  end
 end

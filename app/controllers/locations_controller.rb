@@ -1,8 +1,13 @@
 # frozen_string_literal: true
 
 class LocationsController < ApplicationController
+  helper_method :city
+  
+  def show; end
 
-  def show
+  private
+
+  def city
     @city = CityInformation.new(params[:id])
   end
 end

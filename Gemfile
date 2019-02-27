@@ -23,6 +23,7 @@ gem "breadcrumbs_on_rails"
 gem 'filterrific'
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap4'
+gem 'chartkick'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

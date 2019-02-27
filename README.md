@@ -19,6 +19,7 @@
     * [Home Page](#home-page)
     * [City View](#city-view)
     * [City Search](#city-search)
+    * [User Dashboard](#user-dashboard)
 * [How To Contribute](#how-to-contribute)
 * [Contributors/Developers](#contributorsdevelopers)
 
@@ -113,19 +114,28 @@ GitWired is an open source project. We invite your participation through issues 
 When adding or changing a service please add tests.
 
 Issues needing additional support:
-- Getting more robust card details from this GitHub endpoint: https://developer.github.com/v3/issues/
-- Matching event details to the card from this GitHub endpoint: https://developer.github.com/v3/issues/events/
+- Desperately needs styling love!
 
 ## Screenshots
+
 ### Home Page
-Coming Soon!
+
+<img src="./screenshots/home_view.png">
+
 ### City View
+
 <img src="./screenshots/city_view.png">
+
 ### City Search
-Coming Soon!
+
+<img src="./screenshots/city_search.png">
+
+### User Dashboard
+
+<img src="./screenshots/user_dashboard.png">
 
 ## Known Issues
-Currently, there are few issues when unfavoriting a location.
+There are no known issues at this time.
 
 ## Contributors/Developers
 This project was submitted by [Harper Bellows](@hbellows)

@@ -7,6 +7,9 @@
             <%= submit_tag 'Unfavorite', type: 'submit', class: "btn btn-primary" , method: :put%>
           <% end %>
         <% else %>
+          <% if current_user.eliminated_favorite?(city.geo_id) %>
+            <p>You previously favorited this location</p>
+          <% end %>
           <%= form_tag :favorites, { action: 'create' } do %>
             <%= hidden_field_tag :geo_id, city.geo_id  %>
             <%= submit_tag 'Favorite', type: 'submit', class: "btn btn-primary" %>

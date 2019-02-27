@@ -2,6 +2,10 @@
 
 module CityDataHelper
 
+  def info_year
+    city_stats[:year]
+  end
+
   def city_name
     city_overview[:display_name]
   end
@@ -15,7 +19,7 @@ module CityDataHelper
   end
 
   def pop_rank
-    city_data[:pop_rank].to_i
+    city_stats[:pop_rank].to_i
   end
 
   def average_age
@@ -35,7 +39,7 @@ module CityDataHelper
   end
 
   def income_rank
-    city_data[:income_rank].to_i
+    city_stats[:income_rank].to_i
   end
 
   def average_property_value

@@ -63,7 +63,7 @@ More information about GitHub developer keys can be found in the [GitHub develop
    - `GITHUB_API_KEY`
 5. Run `rails db:{create,migrate,seed}` in the project folder.
 6. To use the application locally, run `rails s` and navigate to `http:localhost:3000`
-7. Or, use go [here](https://smooth-move-1.herokuapp.com/) to see the application live
+7. Or, go [here](https://smooth-move-1.herokuapp.com/) to see the application live
 
 ## Running Tests
 Run `rspec` to run the full test suite, or `rails server` to load up the application.
